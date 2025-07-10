@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mi Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+
+<body>
+  <aside class="sidebar">
+    <marquee>
+    <h2>Thiago Sanó</h2>
+  </marquee>
+    <img src="KK.jpg" width="120px" class="yo" height="120px" alt="fotokk">
+    <marquee>
+    <p>Estudiante de Informatica</p>
+  </marquee>
+    <p>Email: monotematico92@gmail.com</p>
+    <a href="https://www.instagram.com/sathia07_?igsh=cXkzbndmOWpzOXY5">
+    <img src="igicon.png" class="ig" alt="IG">
+  </aside>
+
+  <div class="main-content">
+    <nav class="navbar">
+      <div>Mi Portfolio</div>
+      <div>
+        <a href="#sobremi">Sobre mí</a>
+        <a href="proyectos.html">Proyectos</a>
+        <a href="habilidades.html">Habilidades</a>
+        <a href="series.html">Series</a>
+        <a href="contacto.html">Contacto</a>
+      </div>
+    </nav>
+
+        <div class="content">
+      <section class="section" id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes contactarme a traves de la redes te dejo en la barra lateral.</p>
+      </section>
+
+      <section class="section" id="formulario">
+  <h2>Contacto rápido</h2>
+
+  <form id="contact-form">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p id="mensaje-enviado" style="display: none; color: green; margin-top: 10px;">
+    ¡Formulario enviado con éxito!
+  </p>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contact-form');
+    const mensaje = document.getElementById('mensaje-enviado');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Detiene el envío real
+      mensaje.style.display = 'block'; // Muestra el cartel
+      form.reset(); // Limpia los campos
+    });
+  });
+</script>
+
+    </div>
+  </div>
+  
+</body>
+</html>
